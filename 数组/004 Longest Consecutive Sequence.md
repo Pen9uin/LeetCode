@@ -15,7 +15,7 @@ Your algorithm should run in O(n) complexity.
 
 由于序列里的元素是无序的，又要求$O(n)$，首先要想到用哈希表。
 
-用一个哈希表 $unordered_map<int, bool> used$ 记录每个元素是否使用，对每个元素，以该元素为中心，往左右扩张，直到不连续为止，记录下最长的长度。
+用一个哈希表 ``unordered_map<int, bool> used`` 记录每个元素是否使用，对每个元素，以该元素为中心，往左右扩张，直到不连续为止，记录下最长的长度。
 
 ### 代码
 
