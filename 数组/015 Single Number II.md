@@ -10,7 +10,7 @@ extra memory?
 
 ### 代码
 ```C++
-时间复杂度O(n)，空间复杂度O(1)
+//时间复杂度O(n)，空间复杂度O(1)
 class Solution {
 public:
     int singleNumber(vector<int>& nums) 
