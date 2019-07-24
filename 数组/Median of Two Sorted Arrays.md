@@ -8,6 +8,7 @@ arrays. The overall run time complexity should be O(log(m + n)).
 ```
 
 ### 分析
+```
 这是一道非常经典的题。这题更通用的形式是，给定两个已经排序好的数组，找到两者所有元素中第 k 大的元素。
 
 O(m+n) 的解法比较直观，直接 merge 两个数组，然后求第 k 大的元素。
@@ -33,6 +34,7 @@ O(m+n) 的解法比较直观，直接 merge 两个数组，然后求第 k 大的
 - 当A或B是空时，直接返回 B[k-1] 或 A[k-1] ；
 - 当 k=1 时，返回 min(A[0], B[0]) ；
 - 当 A[k/2-1] == B[k/2-1] 时，返回 A[k/2-1] 或 B[k/2-1] 
+```
 
 ### 代码
 ```C++
@@ -47,8 +49,8 @@ public:
         if (total & 0x1)
             return find_kth(A.begin(), m, B.begin(), n, total / 2 + 1);
         else
-            return (find_kth(A.begin(), m, B.begin(), n, total / 2)
-                    + find_kth(A.begin(), m, B.begin(), n, total / 2 + 1)) / 2.0;
+            return (find_kth(A.begin(), m, B.begin(), n, total / 2) + 
+                    find_kth(A.begin(), m, B.begin(), n, total / 2 + 1)) / 2.0;
     }
 private:
     static int find_kth(std::vector<int>::const_iterator A, int m, 
