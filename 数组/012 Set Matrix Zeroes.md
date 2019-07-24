@@ -73,7 +73,7 @@ public:
                 break;
             }
 
-        for (size_t i = 1; i < m; i++)
+        for (size_t i = 1; i < m; i++)      //从 1 开始
             for (size_t j = 1; j < n; j++)
                 if (matrix[i][j] == 0) {
                     matrix[0][j] = matrix[i][0] = 0;
