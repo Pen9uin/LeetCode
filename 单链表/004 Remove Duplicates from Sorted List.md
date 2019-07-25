@@ -30,3 +30,18 @@ public:
     }
 };
 ```
+
+### 代码2 递归
+```C++
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        if (!head || !head->next) return head;
+        head->next = deleteDuplicates(head->next);
+        return (head->val == head->next->val) ? head->next : head;
+    }
+};
+```
+
+### 参考
+https://www.cnblogs.com/grandyang/p/4066453.html
