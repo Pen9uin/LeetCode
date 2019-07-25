@@ -29,6 +29,7 @@ public:
             ListNode *cur = pre->next;
             while(cur->next && cur->next->val = cur->val)
                 cur = cur->next;
+                
             if(cur == pre->next)
                 pre = pre->next;
             else
