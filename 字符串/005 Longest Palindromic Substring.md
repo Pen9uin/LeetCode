@@ -14,11 +14,5 @@ of S is 1000, and there exists one unique longest palindromic substring.
 思路二：动规，复杂度 $O(n^2)$。设状态为 f(i,j) ，表示区间 [i,j] 是否为回文串，则状态转移方程为
 
 $$
-f(i,j)=\begin{cases}
-true & ,i=j\\
-
-S[i]==S[j] & , j = i + 1 \\
-
-S[i]==S[j] \text{ and } f(i+1, j-1) & , j > i + 1
-\end{cases}
+f(i,j)=\begin{cases}true & ,i=j \\ S[i]==S[j] & , j = i + 1 \\ S[i]==S[j] \text{ and } f(i+1, j-1) & , j > i + 1 \end{cases}
 $$
