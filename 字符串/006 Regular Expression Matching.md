@@ -29,7 +29,7 @@ isMatch("aab", "c*a*b") → true
 
 ### 代码
 
-```
+```C++
 class Solution {
 public:
     bool isMatch(string s, string p) {
