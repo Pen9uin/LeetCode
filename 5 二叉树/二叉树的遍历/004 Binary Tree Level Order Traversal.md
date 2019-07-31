@@ -27,7 +27,7 @@ public:
         if (!root) return {};
         vector<vector<int>> res;
         queue<TreeNode*> q;
-        q.push(root)
+        q.push(root);
         while (!q.empty()) {
             vector<int> oneLevel;
             for (int i = q.size(); i > 0; --i) {
