@@ -31,7 +31,7 @@ public:
         {
             if (sum < 0) 
             {
-                start = i 
+                start = i;
                 sum = 0;
             }
             total += gas[i] - cost[i];
