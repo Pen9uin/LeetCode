@@ -1,4 +1,4 @@
-## - [LeetCode236] Lowest Common Ancestor of a Binary Tree 二叉树的最小共同父节点
+## - [LeetCode236] Lowest Common Ancestor of a Binary Tree
 
 ### 描述
 
