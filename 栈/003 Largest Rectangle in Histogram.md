@@ -12,7 +12,8 @@ find the area of largest rectangle in the histogram.
 Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
 ```
 
-![](https://img2018.cnblogs.com/blog/391947/201905/391947-20190527234338918-926009270.png)
+![](https://img2018.cnblogs.com/blog/391947/201905/391947-20190527234324820-35463424.png)
+
 
 ```
 The largest rectangle is shown in the shaded area, which has area = 10 unit.
