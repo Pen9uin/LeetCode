@@ -6,7 +6,7 @@
 find the area of largest rectangle in the histogram.
 ```
 
-![](https://https://github.com/Pen9uin/LeetCode/blob/master/imgs/Largest%20Rectangle%20in%20Histogram%201.png)
+![](https://github.com/Pen9uin/LeetCode/blob/master/imgs/Largest%20Rectangle%20in%20Histogram%201.png)
 
 ```
 Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
