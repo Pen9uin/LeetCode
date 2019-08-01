@@ -36,7 +36,7 @@ After calling your function, the tree should look like:
 用到queue来辅助，由于是层序遍历，每层的节点都按顺序加入queue中，而每当从queue中取出一个元素时，将其next指针指向queue中下一个节点即可，我们对于每层的开头元素开始遍历之前，先统计一下该层的总个数，用个for循环，这样for循环结束的时候，我们就知道该层已经被遍历完了。
 
 ### 代码
-```C++
+```
 class Solution {
 public:
     Node* connect(Node* root) {
@@ -59,7 +59,11 @@ public:
 };
 ```
 
+### 参考
 
+https://www.cnblogs.com/grandyang/p/4288151.html
+
+https://www.cnblogs.com/grandyang/p/4290148.html
 
 
 
