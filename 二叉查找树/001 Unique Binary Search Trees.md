@@ -16,9 +16,7 @@ Given n = 3, there are a total of 5 unique BST's.
 
 ### 分析
 
-$$
-f(i) = \sum_{k=1}^{i} f(k-1) \times f(i-k)
-$$
+   $f(i) = \sum_{k=1}^{i} f(k-1) \times f(i-k)$
 
 ### 代码
 ```
