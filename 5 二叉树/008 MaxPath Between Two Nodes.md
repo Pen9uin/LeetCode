@@ -9,7 +9,7 @@
 ### 代码
 
 ```
-int maxDist(TreeNode* root) {  
+int maxPath(TreeNode* root) {  
     //如果树是空的或叶子节点，则返回0  
     //这里与求节点的高度有些差异，叶子节点的高度为1，路径长度为0
     if(root == NULL || (!root.left && !root.right)  
