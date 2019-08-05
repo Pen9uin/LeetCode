@@ -55,3 +55,28 @@ public:
 };
 ```
 
+下面这种解法跟上面那个很类似，都是用递归的中序遍历，但不同之处是不将遍历结果存入一个数组遍历完成再比较，而是每当遍历到一个新节点时和其上一个节点比较，如果不大于上一个节点那么则返回false，全部遍历完成后返回true。代码如下：
+
+```
+class Solution {
+public:
+    bool isValidBST(TreeNode* root) {
+        TreeNode *pre = NULL;
+        return inorder(root, pre);
+    }
+    bool inorder(TreeNode* node, TreeNode*& pre) {
+        if (!node) return true;
+        bool res = inorder(node->left, pre);
+        if (!res) return false;
+        if (pre) {
+            if (node->val <= pre->val) return false;
+        }
+        pre = node;
+        return inorder(node->right, pre);
+    }
+};
+```
+
+### 参考
+
+https://www.cnblogs.com/grandyang/p/4298435.html
