@@ -9,7 +9,13 @@
 ### 代码
 
 ```
-int maxPath(TreeNode* root) {  
+int maxPath(TreeNode* root) { 
+    int max = -1;
+    _maxpath(root,max)
+    return max;
+};
+
+int _maxPath(TreeNode* root, int &max) {  
     //如果树是空的或叶子节点，则返回0  
     //这里与求节点的高度有些差异，叶子节点的高度为1，路径长度为0
     if(root == NULL || (!root.left && !root.right)  
