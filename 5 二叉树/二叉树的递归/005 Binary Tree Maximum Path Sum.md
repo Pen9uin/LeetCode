@@ -51,6 +51,6 @@ public:
 
 https://www.cnblogs.com/grandyang/p/4280120.html
 
-![MaxPath Between Two Nodes](https://github.com/Pen9uin/LeetCode/blob/master/5%20%E4%BA%8C%E5%8F%89%E6%A0%91/008%20MaxPath%20Between%20Two%20Nodes.md)
+[MaxPath Between Two Nodes](https://github.com/Pen9uin/LeetCode/blob/master/5%20%E4%BA%8C%E5%8F%89%E6%A0%91/008%20MaxPath%20Between%20Two%20Nodes.md)
 
 
