@@ -21,8 +21,8 @@ int _maxPath(TreeNode* root, int &max) {
     if(root == NULL || (!root.left && !root.right)  
         return 0;  
         
-    int lm = maxDist(root->left);  
-    int rm = maxDist(root->right);  
+    int lm = _maxPath(root->left);  
+    int rm = _maxPath(root->right);  
     
     //如果以该节点为根的子树中有最大的距离，那就更新最大距离  
     int sum = lm + rm;  
