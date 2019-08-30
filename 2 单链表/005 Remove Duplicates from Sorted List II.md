@@ -34,9 +34,8 @@ public:
                 pre = pre->next;
             else
                 pre->next = cur->next;
-            
-            return dummy->next;
         }
+        return dummy->next;
     }
 };
 ```
