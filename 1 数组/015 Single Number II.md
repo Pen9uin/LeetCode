@@ -25,8 +25,8 @@ public:
         int result = 0;
         for (int i = 0; i < W; i++) 
         {
-            if(count[j] %3 != 0)
-                result += (count[i] << i);
+            if(count[i] %3 != 0)
+                result += (1 << i);
         }
         return result;
     }
