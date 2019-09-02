@@ -35,7 +35,7 @@ public:
             }
         }
 
-        left_cur->next = right_dummy.next;
+        left_cur->next = right_cur.next;
         right_cur->next = nullptr;
 
         return left_dummy.next;
