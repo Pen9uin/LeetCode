@@ -16,9 +16,9 @@ What is the minimum candies you must give?
 
 ```
 for example:
-ratings = [1 2 4 5 3]
-从左到右：  1 2 3 4 1
-从右到左：  1 2 3 5 1
+ratings = [1 2 4 5 3 2]
+从左到右：  1 2 3 4 1 1
+从右到左：  1 2 3 5 2 1
 ```
 
 ### 代码
