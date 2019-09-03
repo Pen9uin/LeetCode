@@ -22,8 +22,7 @@ public:
         if (m < n) return -1;
         
         for (int i = 0; i <= m - n; ++i) {
-            int j = 0;
-            for (j = 0; j < n; ++j) 
+            for (int j = 0; j < n; ++j) 
                 if (haystack[i + j] != needle[j]) break;
             
             if (j == n) return i;
