@@ -5,15 +5,15 @@ double Sqrt(double A)
 {
     double a = 0.0, b = A + 0.25, m;
 	
-    while(b - a > 2*DBL_EPSILON)
+    while(b - a > 1e-6)
     {
         m = (b + a)/2;
         if( (m*m - A) * (a*a - A) < 0 )
             b = m;
         else 
             a = m;
-	}
-	return m;
+    }
+    return m;
 }
 ```
 
