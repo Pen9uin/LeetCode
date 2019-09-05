@@ -17,7 +17,7 @@ public:
         int n = height.size();
         int i = 0, j = n-1;
         int mm = min(height[i],height[j])*(j-i);
-        while(true)
+        while(i < j)
         {
             if(height[i] <= height[j])
                 i++;
@@ -25,9 +25,6 @@ public:
                 j--;
             
             mm = max(mm,min(height[i],height[j])*(j-i));
-            
-            if(i >= j)
-                break;
         }
         return mm;
     }
