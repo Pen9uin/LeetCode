@@ -11,33 +11,32 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
 
 ### 代码
 ```
-class Solution(object):
-    def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
-        length = len(prices)
-        if length==0: 
-            return 0
-        f1 = [0 for __ in range(length)]
-        f2 = [0 for __ in range(length)]
-        # 从前往后最大利润
-        minPrice = prices[0]
-        for i in range(1, length):
-            f1[i] = max(f1[i-1], prices[i]-minPrice)
-            minPrice=min(minPrice, prices[i])
-        # 从后往前则是最小利润
-        maxPrice = prices[length-1]
-        for i in range(length-2,-1,-1):
-            f2[i] = max(f2[i+1], maxPrice-prices[i])
-            maxPrice = max(maxPrice, prices[i])
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        if (prices.size() < 2) return 0;
 
-        maxProfit=0
-        for i in range(length):
-            if f1[i]+f2[i] > maxProfit: 
-                maxProfit = f1[i]+f2[i]
-        return maxProfit
+        const int n = prices.size();
+        vector<int> f(n, 0);
+        vector<int> g(n, 0);
+
+        for (int i = 1, valley = prices[0]; i < n; ++i) {
+            valley = min(valley, prices[i]);
+            f[i] = max(f[i - 1], prices[i] - valley);
+        }
+
+        for (int i = n - 2, peak = prices[n - 1]; i >= 0; --i) {
+            peak = max(peak, prices[i]);
+            g[i] = max(g[i], peak - prices[i]);
+        }
+
+        int max_profit = 0;
+        for (int i = 0; i < n; ++i)
+            max_profit = max(max_profit, f[i] + g[i]);
+
+        return max_profit;
+    }
+};
 ```
 
 ### 参考
