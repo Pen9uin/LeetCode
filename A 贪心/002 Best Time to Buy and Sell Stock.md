@@ -8,7 +8,7 @@ If you were only permitted to complete at most one transaction (ie, buy one and 
 design an algorithm to find the maximum profit.
 ```
 
-### 分析
+### 代码
 ```
 class Solution {
 public:
