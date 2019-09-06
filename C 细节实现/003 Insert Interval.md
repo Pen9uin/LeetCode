@@ -31,9 +31,9 @@ public:
             ++cur;
         }
         res.push_back(newInterval);
-        while (cur < n) {
+        while (cur < n)
             res.push_back(intervals[cur++]);
-        }
+        
         return res;
     }
 };
