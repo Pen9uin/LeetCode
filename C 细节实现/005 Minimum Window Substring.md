@@ -19,19 +19,19 @@ class Solution {
 public:
     string minWindow(string s, string t) {
         string ans = "";
-        vector<int> letter_count(128, 0);
-        int left = 0;
-        int count = 0; 
-        int minLen = INT_MAX;
-        
+        vector<int> letter_count(128, 0);        
         for (char c : t)
             letter_count[c]++;
+        
+        int left = 0;
+        int count = 0; 
+        int minLen = s.size()+1;
         
         for (int i = 0; i < s.size() ; i++){
             if(letter_count[s[i]] > 0)
                 count++;
             letter_count[s[i]]--;
-
+            
             while(count == t.size()){
                 if(minLen > i - left + 1){
                     minLen = i - left + 1;
@@ -39,10 +39,9 @@ public:
                 }
                 
                 ++letter_count[s[left]];
-                if(letter_count[s[left]] > 0){
+                if(letter_count[s[left++]] > 0){
                     --count;
                 }
-                ++left;
             }
         }
         return ans;
