@@ -25,7 +25,7 @@ public:
         int index = 0;
         for (int i = 1; i < nums.size(); i++) 
         {
-            if (nums[index] != nums[i])
+            if (nums[i-1] != nums[i])
                 nums[++index] = nums[i];
         }
         return index + 1;
@@ -55,7 +55,7 @@ public:
         int index = 2;
         for (int i = 2; i < nums.size(); i++)
         {
-            if (nums[i] != nums[index - 2])
+            if (nums[i] != nums[i - 2])
                 nums[index++] = nums[i];
         }
         return index;
