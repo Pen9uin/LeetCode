@@ -30,6 +30,6 @@ double Sqrt(double x)
         pre = res;
         res = (res + x / res) / 2;
     }
-    return int(res);
+    return res;
 }
 ```
