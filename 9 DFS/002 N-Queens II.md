@@ -18,9 +18,11 @@ public:
         return res;
     }
     void helper(vector<int>& pos, int row, int& res) {
-        int n = pos.size();
-        if (row == n) {++res; return;}
-        for (int col = 0; col < n; ++col) {
+        if (row == pos.size()){
+            ++res; 
+            return;
+        }
+        for (int col = 0; col < pos.size(); ++col) {
             if (isValid(pos, row, col)) {
                 pos[row] = col;
                 helper(pos, row + 1, res);
