@@ -23,9 +23,9 @@ public:
         stringstream ss(path);
         while(getline(ss,tmp,'/')) {
             //tmp == "" when occurs '//' or path[0] = '/'
-            if (tmp == "" or tmp == ".")
+            if (tmp == "" || tmp == ".")
                 continue;
-            if (tmp == ".." and !stk.empty()) 
+            if (tmp == ".." && !stk.empty()) 
                 stk.pop_back();
             else if (tmp != "..") 
                 stk.push_back(tmp);
