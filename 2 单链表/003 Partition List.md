@@ -21,8 +21,10 @@ class Solution {
 public:
     ListNode* partition(ListNode* head, int x) 
     {
-        ListNode *left_cur = new ListNode(-1);
-        ListNode *right_cur = new ListNode(-1);
+        ListNode left_dummy(-1);
+        ListNode right_dummy(-1);
+        ListNode *left_cur = left_dummy;
+        ListNode *right_cur = right_dummy;
 
         for (ListNode *cur = head; cur; cur = cur->next) 
         {
@@ -35,10 +37,10 @@ public:
             }
         }
 
-        left_cur->next = right_cur.next;
+        left_cur->next = right_dummy.next;
         right_cur->next = nullptr;
 
-        return left_cur.next;
+        return left_dummy.next;
     }
 };
 ```
