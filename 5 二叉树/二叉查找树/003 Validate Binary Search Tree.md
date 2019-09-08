@@ -71,8 +71,8 @@ public:
         bool res = inorder(node->left, pre);
         if (!res) 
             return false;
-        if (pre) 
-            if (node->val <= pre->val) return false;
+        if (pre && node->val <= pre->val) 
+            return false;
         pre = node;
         
         return inorder(node->right, pre);
