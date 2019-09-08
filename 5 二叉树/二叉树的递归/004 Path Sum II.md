@@ -27,14 +27,12 @@ return
 class Solution {
 public:
     vector<vector<int> > FindPath(TreeNode* root,int expectNumber){
-        if(root == NULL){
+        if(root == NULL)
             return result;
-        }
         
         tmp.push_back(root->val);
-        if((expectNumber - root->val ) == 0 && root->left == NULL && root->right == NULL){
+        if((expectNumber - root->val) == 0 && !root->leftL && !root->right)
             result.push_back(tmp);
-        }
         
         //遍历左子树
         FindPath(root->left, expectNumber - root->val);
