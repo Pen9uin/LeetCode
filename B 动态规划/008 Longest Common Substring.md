@@ -24,13 +24,12 @@ public:
                 if(A[i - 1] == B[j - 1])
                 {
                     dp[i][j] = dp[i -1][j - 1] + 1;
-                    rs = max(rs,dp[i][j]);//每次更新记录最大值
+                    rs = max(rs,dp[i][j]);
                 }
- 
-                else//不相等的情况
+                else
                     dp[i][j] = 0;
             }
-            return rs;//返回的结果为rs
+        return rs;//返回的结果为rs
     }
 };
 ```
