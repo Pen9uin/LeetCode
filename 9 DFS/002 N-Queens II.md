@@ -19,7 +19,7 @@ public:
     }
     void helper(vector<int>& pos, int row, int& res) {
         int n = pos.size();
-        if (row == n) ++res;
+        if (row == n) {++res; return;}
         for (int col = 0; col < n; ++col) {
             if (isValid(pos, row, col)) {
                 pos[row] = col;
