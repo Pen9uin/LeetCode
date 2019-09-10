@@ -1,5 +1,6 @@
 ### v1
 ```
+//O(lgN)
 int power(int x, unsigned int n)
 {
     if (n == 0)
